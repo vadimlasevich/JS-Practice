@@ -7,6 +7,9 @@ const multiply = document.querySelector('.multiply');
 const division = document.querySelector('.division');
 
 
+function insert(num) {
+   input.value = input.value + num;
+}
 for (let item of items) {
    item.addEventListener('click', () => {
       let number = item.innerHTML;
