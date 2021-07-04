@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="calculator__container">
+            <div class="calculator__ite input">
+                <input type="text" name="textview" id="input" readonly>
+            </div>
+            <div class="calculator__item clean symbol">C</div>
+            <div class="calculator__item symbol division" onclick="insert('/')">&divide;</div>
+            <div class="calculator__item symbol multiply" onclick="insert('*')">&times;</div>
+            <div class="calculator__item back symbol">&lArr;</div>
+            <div class="calculator__item item">7</div>
+            <div class="calculator__item item">8</div>
+            <div class="calculator__item item">9</div>
+            <div class="calculator__item item symbol">-</div>
+            <div class="calculator__item item">4</div>
+            <div class="calculator__item item">5</div>
+            <div class="calculator__item item">6</div>
+            <div class="calculator__item item symbol">+</div>
+            <div class="calculator__item item">1</div>
+            <div class="calculator__item item">2</div>
+            <div class="calculator__item item">3</div>
+            <div class="calculator__item equal">=</div>
+            <div class="calculator__item" onclick="insert('%')">%</div>
+            <div class="calculator__item item">0</div>
+            <div class="calculator__item item">.</div>
+        </div>
+    </div>
+</body>
+
+</html>
