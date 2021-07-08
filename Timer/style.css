@@ -75,7 +75,9 @@
    margin: 8rem;
    font-size: 20rem;
 }
-.timer__button {
+.timer__button-start,
+.timer__button-pause,
+.timer__button-proceed {
    display: block;
    margin: 0 auto;
    font-size: 7rem;
@@ -85,7 +87,11 @@
    border-radius: 20px;
    transition: all 0.5s ease;
 }
-.timer__button:hover {
+.timer__button-pause,
+.timer__button-proceed {
+   display: none;
+}
+.timer__button-start:hover {
    transform: scale(1.1);
 }
 .timer__messege {
@@ -111,7 +117,7 @@
    width: 60rem;
    height: 40rem;
    z-index: 2;
-   border: 1px solid black;
+   border: 1px solid #000;
    border-radius: 10px;
    background-color: #fff;
    padding: 2rem;

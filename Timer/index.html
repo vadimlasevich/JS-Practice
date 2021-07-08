@@ -32,14 +32,16 @@
       <div class="container">
          <div class="timer__wpapper">
             <div class="timer__buttons" id="timer__buttons">
-               <button class="timer__btn active" data-time="25">Рабочее время</button>
-               <button class="timer__btn" data-time="5">Короткий перерыв</button>
-               <button class="timer__btn" data-time="15">Длинный перерыв</button>
+               <button class="timer__btn active" data-time="1500" value="1">Рабочее время</button>
+               <button class="timer__btn" data-time="300" value="2">Короткий перерыв</button>
+               <button class="timer__btn" data-time="900" value="3">Длинный перерыв</button>
             </div>
             <div class="timer__time">
-               <span class="time">25:00</span>
+               <span class="time"><span class="value"></span>:00</span>
             </div>
-            <button class="timer__button">Начало</button>
+            <button class="timer__button-start">Начало</button>
+            <button class="timer__button-pause">Пауза</button>
+            <button class="timer__button-proceed">Продолжить</button>
          </div>
       </div>
    </div>
@@ -57,15 +59,15 @@
             <div class="setting-modal__parameters-items">
                <div class="parameters-item">
                   <h3 class="parameters-item__title">Рабочее время</h3>
-                  <input class="parameters-item__input" type="text" value="25">
+                  <input class="parameters-item__input input-big-time" type="text" value="25">
                </div>
                <div class="parameters-item">
                   <h3 class="parameters-item__title">Короткий перерыв</h3>
-                  <input class="parameters-item__input" type="text" value="5">
+                  <input class="parameters-item__input input-min-time" type="text" value="5">
                </div>
                <div class="parameters-item">
                   <h3 class="parameters-item__title">Длинный перерыв</h3>
-                  <input class="parameters-item__input" type="text" value="15">
+                  <input class="parameters-item__input input-mid-time" type="text" value="15">
                </div>
             </div>
          </div>
