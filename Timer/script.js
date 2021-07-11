@@ -5,7 +5,6 @@ const settingBtn = document.querySelector('.header__btn');
 const modalWindow = document.querySelector('.setting-modal');
 const overlay = document.querySelector('.overlay');
 const modalWindowBtn = document.querySelector('.setting-modal__btn');
-
 const timeEl = document.querySelector('.time');
 const timerButtonStart = document.querySelector('.timer__button-start');
 const timerButtonPause = document.querySelector('.timer__button-pause');
@@ -17,16 +16,17 @@ const valueTimeMid = document.querySelector('.value__time-mid');
 const messege = document.querySelector('.timer__messege');
 const settingInput = document.querySelectorAll('.parameters-item__input');
 const pauseBtn = document.querySelector('.pause');
+const bell = document.querySelector('audio');
+
 let inputBigTime = document.querySelector('.input-big-time');
 let inputMinTime = document.querySelector('.input-min-time');
 let inputMidTime = document.querySelector('.input-mid-time');
-
 let time = inputBigTime.value * 60;
-let clockRun = false;
-let type = "Work";
 let relaxTime;
 let relaxBigTime;
 let workTime;
+let clockRun = false;
+let type = "Work";
 
 // modal window
 const closeModalWindow = () => {
@@ -143,6 +143,7 @@ const changeInput = () => {
       let inputBigTimeVal = inputBigTime.value;
       inputBigTime.dataset.time = inputBigTimeVal * 60;
       setBigTimeFirst(inputBigTimeVal);
+      time = inputBigTime.value * 60;
    })
    inputMinTime.addEventListener('change', () => {
       let inputMinTimeVal = inputMinTime.value;
@@ -172,100 +173,52 @@ const toggleClock = (reset) => {
 };
 
 const timer = () => {
-      // clearInterval(countdown);
-      // const now = Date.now();
-      // const then = now + seconds * 1000;
-      // decreaseTime(seconds);
-
-      // countdown = setInterval(() => {
-      //    const seondsLeft = Math.round((then - Date.now()) / 1000);
-      //    if (seondsLeft < 0) {
-      //       clearInterval(countdown);
-      //       return;
-      //    }
-      //    decreaseTime(seondsLeft);
-      // }, 1000);
-      // let result = "";
-      // let hours = Math.floor(time / 3600);
-      let minutes = Math.floor(time / 60);
-      let seconds = Math.floor(time % 60);
-      const display = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-      // if (hours > 0) result += `${hours}:`;
-      // result += `${minutes}:${seconds}`;
-      // tracker.innerHTML = result;
-      setTime(display);
+   let minutes = Math.floor(time / 60);
+   let seconds = Math.floor(time % 60);
+   const display = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+   minutes = minutes < 10 ? "0" + minutes : minutes;
+   seconds = seconds < 10 ? "0" + seconds : seconds;
+   setTime(display);
 }
-
-// const decreaseTime = (seconds) => {
-//    const minutes = Math.floor(seconds / 60);
-//    const sec = seconds % 60;
-//    const display = `${minutes}:${sec < 10 ? '0' : ''}${sec}`;
-
-//    setTime(display);
-// }
 
 const stopTimer = () => {
    for (btn of timerBtn) {
-      if(btn.getAttribute('value') === '1') {
-         clearInterval(clockTimer);
-         time = workTime;
-         timer();
-      } else if(btn.getAttribute('value') === '2') {
-         clearInterval(clockTimer);
-         time = relaxTime;
-         timer();
-      } else {
-         clearInterval(clockTimer);
-         time = relaxBigTime;
-         timer();
+      if (btn.classList.contains('active')) {
+         if (btn.getAttribute('value') === '1') {
+            clearInterval(clockTimer);
+            time = workTime;
+            timer();
+         } else if (btn.getAttribute('value') === '2') {
+            clearInterval(clockTimer);
+            time = relaxTime;
+            timer();
+         } else {
+            clearInterval(clockTimer);
+            time = relaxBigTime;
+            timer();
+         }
       }
    }
-   // if (type === "Relax") {
-   //       clearInterval(clockTimer);
-   //       clockRun = false;
-   //       time = relaxTime;
-   //       // time = 0;
-   //       timer();
-   //  } else if(type === "RelaxBig") {
-   //       clearInterval(clockTimer);
-   //       clockRun = false;
-   //       time = relaxBigTime;
-   //       // time = 0;
-   //       timer();
-   //  } else {
-   //       clearInterval(clockTimer);
-   //       clockRun = false;
-   //       time = workTime;
-   //       // time = 0;
-   //       timer();
-   //  }
 };
 
 const stepDown = () => {
    if (time > 0) {
-     time--;
+      time--;
    } else if (time === 0) {
-     if (type === "Work") {
-       type = "Relax";
-       time = inputMinTime.value * 60;
-     } else {
-       time = inputBigTime.value * 60;
-     }
+      bell.play();
    }
- };
+};
 
 timerButtonStart.addEventListener('click', () => {
    timerButtonStart.style.display = 'none';
    timerButtonPause.style.display = 'block';
    timerButtonStop.style.display = 'block';
-   
+
    workTime = inputBigTime.value * 60;
    relaxBigTime = inputMidTime.value * 60;
    relaxTime = inputMinTime.value * 60;
-   
-   for(let btn of timerBtn) {
+
+   for (let btn of timerBtn) {
       btn.addEventListener('click', () => {
          if (confirm('Время таймера будет остановленно!') === true) {
             timerButtonProceed.style.display = 'none';
