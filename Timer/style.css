@@ -1,0 +1,194 @@
+.container {
+   max-width: 116rem;
+   margin: 0 auto;
+   padding: 0 3rem 0 3rem;
+}
+
+.header {
+   padding: 3rem 0 5rem 0;
+}
+
+.header .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header__logo-link {
+   display: flex;
+   align-items: center;
+}
+.header__logo-link img {
+   width: 6rem;
+   height: 6rem;
+   margin-right: 0.5rem;
+}
+.header__logo-text {
+   font-size: 2.5rem;
+}
+.header__btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2.5rem;
+   padding: 1rem;
+   border-radius: 10px;
+   background: rgb(250, 124, 124);
+   transition: all 0.5s ease;
+}
+.header__btn:hover {
+   background: rgb(255, 103, 103);
+}
+.header__btn img {
+   width: 3.5rem;
+   height: 3.5rem;
+   margin-right: 0.5rem;
+}
+
+.timer {
+   margin-top: 5rem;
+}
+.timer__wpapper {
+   margin: 0 auto;
+   width: 80rem;
+   height: 60rem;
+   background: rgb(250, 124, 124);
+}
+.timer__buttons {
+   display: flex;
+   justify-content: center;
+   padding-top: 2rem;
+}
+.timer__btn {
+   font-size: 2.3rem;
+   padding: 1rem;
+   border-radius: 10px;
+   background: rgb(250, 124, 124);
+}
+.timer__btn:not(:last-child) {
+   margin-right: 1.5rem;
+}
+.timer__btn.active {
+   background: rgb(158, 75, 75);
+}
+.timer__time {
+   text-align: center;
+   margin: 8rem;
+   font-size: 20rem;
+}
+.time{
+   display: flex;
+   justify-content: center;
+}
+.timer__buttons-big {
+   display: flex;
+   justify-content: center;
+}
+.timer__button-start,
+.timer__button-pause,
+.timer__button-proceed,
+.timer__button-stop {
+   display: block;
+   margin: 0 auto;
+   font-size: 7rem;
+   background: #fff;
+   color: rgb(158, 75, 75);
+   padding: 1rem 8rem;
+   border-radius: 20px;
+   transition: all 0.5s ease;
+}
+.timer__button-pause,
+.timer__button-proceed,
+.timer__button-stop {
+   display: none;
+   font-size: 5rem;
+   padding: 1rem 2rem;
+}
+.timer__button-start:hover, 
+.timer__button-stop:hover,
+.timer__button-pause:hover,
+.timer__button-proceed:hover {
+   transform: scale(1.1);
+}
+.timer__messege {
+   display: block;
+   text-align: center;
+   margin-top: 8rem;
+   font-size: 5rem;
+}
+.value__time-min, 
+.value__time-mid {
+   display: none;
+}
+.setting-modal {
+   width: 100%;
+   height: 100%;
+   display: none;
+}
+.setting-modal.active {
+   display: block;
+}
+.setting-modal__wrapper {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 60rem;
+   height: 40rem;
+   z-index: 2;
+   border: 1px solid #000;
+   border-radius: 10px;
+   background-color: #fff;
+   padding: 2rem;
+}
+.setting-modal__header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.setting-modal__title {
+   color: gray;
+   font-size: 3rem;
+}
+.setting-modal__btn {
+   background: transparent;
+}
+.setting-modal__btn img {
+   width: 4rem;
+   height: 4rem;
+}
+hr {
+   background: gray;
+   height: 1px;
+   margin: 3rem 0;
+}
+.setting-modal__parameters-title {
+   font-size: 2.5rem;
+   color: rgb(88, 88, 88);
+}
+.setting-modal__parameters-items {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 3rem;
+}
+.parameters-item__title {
+   font-size: 2rem;
+   color: gray;
+}
+.parameters-item__input {
+   background: rgb(212, 211, 211);
+   width: 12rem;
+   font-size: 4rem;
+   color: #000;
+   margin-top: 1.5rem;
+}
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   background-color: gray;
+   opacity: 0.6;
+}
