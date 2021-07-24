@@ -1,2 +1,2 @@
-import "../styles/style.scss";
-import "./main.js";
+import "../styles/maze-game.scss";
+import "./maze-game.js";
