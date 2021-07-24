@@ -1,25 +1,28 @@
-body {
+.maze-game {
    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
    background: wheat;
    margin: 0;
-   padding: 0;
+   padding: 0 0 10rem 0;
+   width: 100%;
 }
-button {
+.maze-game__button {
    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 canvas {
-   margin: 5rem 0;
+   margin: 5rem 0 20rem 0;
 }
-h1 {
+.maze-game__title {
    margin: 0;
+   color: gray;
+   font-size: 5rem;
 }
 
 .overlay {
    position: absolute;
    top: 0;
    left: 0;
-   width: 100vw;
-   height: 100vh;
+   width: 100%;
+   height: 100%;
    z-index: 1;
    background-color: gray;
    opacity: 0.5;
@@ -27,7 +30,7 @@ h1 {
 .restart-btn {
    display: block;
    margin: 0 auto;
-   font-size: 2rem;
+   font-size: 3rem;
    padding: 1.5rem 4rem;
    background: rgb(255, 175, 4);
    border: 2px solid rgb(177, 136, 4);
@@ -37,7 +40,8 @@ h1 {
    transition: all 0.5s ease;
 }
 .message-title {
-   font-size: 3rem;
+   font-size: 5rem;
+   margin-bottom: 3rem;
 }
 
 .maze-game {
@@ -71,8 +75,9 @@ h1 {
 }
 .win-message {
    &__content {
-      width: 40rem;
-      padding: 2rem 0;
+      width: 50rem;
+      padding: 4rem 0;
+      border-radius: 20px;
       background-color: rgb(94, 190, 75);
       position: absolute;
       z-index: 2;
@@ -83,8 +88,9 @@ h1 {
 }
 .fail-message {
    &__content {
-      width: 40rem;
-      padding: 2rem 0;
+      width: 50rem;
+      padding: 4rem 0;
+      border-radius: 20px;
       background-color: rgb(247, 68, 68);
       position: absolute;
       z-index: 2;

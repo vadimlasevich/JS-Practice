@@ -3,7 +3,7 @@ const timerBtn = document.querySelectorAll('.timer__btn');
 const timerBtnFirst = document.querySelectorAll('.timer__btn-first');
 const settingBtn = document.querySelector('.header__btn');
 const modalWindow = document.querySelector('.setting-modal');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.timer__overlay');
 const modalWindowBtn = document.querySelector('.setting-modal__btn');
 const timeEl = document.querySelector('.time');
 const timerButtonStart = document.querySelector('.timer__button-start');
@@ -72,7 +72,7 @@ const changeBtn = elem => {
 }
 
 const colorScreenBigTime = () => {
-   document.body.style.background = '';
+   document.getElementById('section-timer').style.background = '';
    document.querySelector('.header__btn').style.background = '';
    document.querySelector('.timer__wpapper').style.background = '';
    timerButtonStart.style.color = '';
@@ -86,7 +86,7 @@ const colorScreenBigTime = () => {
 }
 
 const colorScreenMinTime = () => {
-   document.body.style.background = 'rgb(59, 189, 206)';
+   document.getElementById('section-timer').style.background = 'rgb(59, 189, 206)';
    document.querySelector('.header__btn').style.background = 'rgb(123, 224, 238)';
    document.querySelector('.timer__wpapper').style.background = 'rgb(123, 224, 238)';
    timerButtonStart.style.color = 'rgb(59, 189, 206)';
@@ -104,7 +104,7 @@ const colorScreenMinTime = () => {
 }
 
 const colorScreenMiddleTime = () => {
-   document.body.style.background = 'rgb(41, 114, 173)';
+   document.getElementById('section-timer').style.background = 'rgb(41, 114, 173)';
    document.querySelector('.header__btn').style.background = 'rgb(66, 146, 211)';
    document.querySelector('.timer__wpapper').style.background = 'rgb(66, 146, 211)';
    document.querySelector('.timer__btn.active').style.background = 'rgb(41, 114, 173)';

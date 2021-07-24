@@ -1,14 +1,15 @@
-body {
+.section-slider {
    font-family: "Lato", sans-serif;
-}
-h1 {
-   text-align: center;
 }
 .slider {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   &__title {
+      text-align: center;
+      font-size: 5rem;
+   }
 }
 .slider-container {
    display: flex;
@@ -37,7 +38,7 @@ h1 {
 }
 .active {
    display: block;
-   background-color: rgb(46, 45, 45);
+   background: rgb(46, 45, 45);
 }
 .btn-prev,
 .btn-next {
@@ -82,7 +83,7 @@ h1 {
    justify-content: center;
    margin-top: 20px;
 }
-span {
+.dot {
    width: 15px;
    height: 15px;
    border-radius: 50%;
@@ -90,6 +91,6 @@ span {
    margin-right: 15px;
    cursor: pointer;
 }
-span:last-child {
+.dot:last-child {
    margin-right: 0;
 }
