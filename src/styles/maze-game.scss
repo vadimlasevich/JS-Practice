@@ -1,0 +1,101 @@
+.maze-game {
+   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+   background: wheat;
+   margin: 0;
+   padding: 0 0 10rem 0;
+   width: 100%;
+}
+.maze-game__button {
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+canvas {
+   margin: 5rem 0 20rem 0;
+}
+.maze-game__title {
+   margin: 0;
+   color: gray;
+   font-size: 5rem;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   background-color: gray;
+   opacity: 0.5;
+}
+.restart-btn {
+   display: block;
+   margin: 0 auto;
+   font-size: 3rem;
+   padding: 1.5rem 4rem;
+   background: rgb(255, 175, 4);
+   border: 2px solid rgb(177, 136, 4);
+   cursor: pointer;
+   color: rgb(63, 54, 54);
+   border-radius: 20px;
+   transition: all 0.5s ease;
+}
+.message-title {
+   font-size: 5rem;
+   margin-bottom: 3rem;
+}
+
+.maze-game {
+   text-align: center;
+   position: relative;
+   &__title {
+      font-size: 4rem;
+      padding: 3rem 0;
+   }
+   &__button {
+      display: block;
+      margin: 0 auto;
+      font-size: 4rem;
+      padding: 2rem 6rem;
+      background: rgb(255, 175, 4);
+      border: 2px solid rgb(177, 136, 4);
+      cursor: pointer;
+      color: rgb(63, 54, 54);
+      border-radius: 20px;
+      transition: all 0.5s ease;
+   }
+   &__button:hover {
+      background: rgb(255, 217, 0);
+   }
+   &__win-message,
+   &__fail-message {
+      display: none;
+      width: 100%;
+      height: 100%;
+   }
+}
+.win-message {
+   &__content {
+      width: 50rem;
+      padding: 4rem 0;
+      border-radius: 20px;
+      background-color: rgb(94, 190, 75);
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+}
+.fail-message {
+   &__content {
+      width: 50rem;
+      padding: 4rem 0;
+      border-radius: 20px;
+      background-color: rgb(247, 68, 68);
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+}

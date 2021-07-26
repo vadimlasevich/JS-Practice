@@ -31,12 +31,6 @@ body {
   /*min-width: ; */
 }
 body {
-  line-height: 1;
-  font-family: cursive;
-  color: #fff;
-  background: -webkit-linear-gradient(315deg, rgb(240, 109, 109), rgb(255, 54, 54) 73%);
-  background: -moz-linear-gradient(315deg, rgb(240, 109, 109), rgb(255, 54, 54) 73%);
-  background: linear-gradient(315deg, rgb(240, 109, 109), rgb(255, 54, 54) 73%);
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -48,8 +42,6 @@ body {
 input,
 button,
 textarea {
-  font-family: cursive;
-  color: #fff;
 }
 
 input::-ms-clear {
