@@ -30,9 +30,11 @@ input {
 		max-width: 30rem;
 		margin: 0 auto;
 		background: rgba(20, 163, 15, 0.5);
+		border-radius: 30px;
 	}
 	&__sub-block {
 		margin-top: 6rem;
+		color: #fff;
 	}
 }
 .location {
@@ -64,6 +66,7 @@ input {
 	&__container {
 		padding: 3rem 6rem;
 		border: 3px solid #333;
+		border-radius: 30px;
 	}
 	&__city-name {
 		font-size: 6rem;
@@ -82,36 +85,40 @@ input {
 .sub-block {
 	&__current-time {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 	&__time {
 		display: flex;
+		align-items: center;
 	}
 	&__date {
 		display: flex;
-	}
-	&__year {
-		margin-left: 2rem;
 	}
 }
 .time {
 	&__hour,
 	&__minutes,
 	&__seconds {
-		font-size: 5rem;
+		font-size: 6rem;
 		font-weight: 600;
-	}
-	&__minutes {
-		margin: 0 2rem;
 	}
 	&__day {
 		margin: 0 2rem;
+		font-size: 3rem;
 	}
 }
 .date {
 	&__number {
+		font-size: 3rem;
+		margin-right: 1rem;
 	}
 	&__month {
+		font-size: 3rem;
+	}
+	&__year {
+		margin-left: 2rem;
+		font-size: 3rem;
 	}
 }
