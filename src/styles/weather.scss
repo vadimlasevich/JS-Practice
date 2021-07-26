@@ -1,0 +1,117 @@
+button,
+input {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	color: #fff;
+}
+.weather {
+	padding: 13rem 0;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	background: url(../assets/images/weather-bg.jpg);
+	background-size: cover;
+	color: rgb(17, 0, 116);
+	&__container {
+		max-width: 126rem;
+		margin: 0 auto;
+		padding: 0 3rem;
+		text-align: center;
+		position: relative;
+	}
+	&__title {
+		font-size: 5rem;
+		font-weight: 700;
+		margin-bottom: 3rem;
+		color: #fff;
+	}
+	&__location {
+		position: absolute;
+		text-align: left;
+	}
+	&__main-block {
+		max-width: 30rem;
+		margin: 0 auto;
+		background: rgba(20, 163, 15, 0.5);
+	}
+	&__sub-block {
+		margin-top: 6rem;
+	}
+}
+.location {
+	&__input {
+		background: rgba(20, 163, 15, 0.5);
+		border: 1px solid #fff;
+		border-radius: 30px;
+		font-size: 3rem;
+		padding: 1rem;
+		width: 25rem;
+		&::placeholder {
+			color: #fff;
+			font-size: 2rem;
+		}
+	}
+	&__button {
+		font-size: 2rem;
+		padding: 1rem 2rem;
+		border-radius: 10px;
+		background: rgb(17, 0, 116);
+		margin-top: 2rem;
+		transition: all 0.5s ease;
+		&:hover {
+			background: rgb(39, 5, 230);
+		}
+	}
+}
+.main-block {
+	&__container {
+		padding: 3rem 6rem;
+		border: 3px solid #333;
+	}
+	&__city-name {
+		font-size: 6rem;
+		font-weight: 600;
+	}
+	&__icon-weather {
+	}
+	&__temperature {
+		font-size: 5rem;
+		margin: 3rem 0;
+	}
+	&__icon-description {
+		font-size: 3rem;
+	}
+}
+.sub-block {
+	&__current-time {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__time {
+		display: flex;
+	}
+	&__date {
+		display: flex;
+	}
+	&__year {
+		margin-left: 2rem;
+	}
+}
+.time {
+	&__hour,
+	&__minutes,
+	&__seconds {
+		font-size: 5rem;
+		font-weight: 600;
+	}
+	&__minutes {
+		margin: 0 2rem;
+	}
+	&__day {
+		margin: 0 2rem;
+	}
+}
+.date {
+	&__number {
+	}
+	&__month {
+	}
+}
