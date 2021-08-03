@@ -168,15 +168,29 @@
 			<div class="weather__location">
 				<form action="#">
 					<input class="location__input" id="sity-input" type="text" placeholder="Введите Ваш город">
+					<div class="message-error">Такой город не найден</div>
 				</form>
 				<button class="location__button">Показать</button>
+				<div class="location__temperature">
+					<div class="location__temperature-title">Отоброжение температуры:</div>
+					<div class="location__temperature-items">
+						<label class="location__temperature-item" for="">Градус Цельсия
+							<input class="location__temperature-celsius location__temperature-btn" type="radio" name="radio-button"
+								value="celsius" checked="checked">
+						</label>
+						<label class="location__temperature-item" for="">Градус Фаренгейта
+							<input class="location__temperature-fahrenheit location__temperature-btn" type="radio" name="radio-button"
+								value="fahrenheit">
+						</label>
+					</div>
+				</div>
 			</div>
 			<div class="weather__main-block">
 				<div class="main-block__container">
 					<div class="main-block__city-name"></div>
 					<div class="main-block__icon-weather"></div>
-					<div class="main-block__temperature">26</div>
-					<div class="main-block__icon-description">Облачно</div>
+					<div class="main-block__temperature"></div>
+					<div class="main-block__icon-description"></div>
 				</div>
 			</div>
 			<div class="weather__sub-block">
@@ -191,7 +205,7 @@
 						<div class="date__month"></div>
 						<div class="date__year"></div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
