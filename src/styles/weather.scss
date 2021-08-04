@@ -1,0 +1,155 @@
+.weather {
+	padding: 13rem 0;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	background: url(../assets/images/weather-bg.jpg);
+	background-size: cover;
+	color: rgb(17, 0, 116);
+	&__container {
+		max-width: 126rem;
+		margin: 0 auto;
+		padding: 0 3rem;
+		text-align: center;
+		position: relative;
+	}
+	&__title {
+		font-size: 5rem;
+		font-weight: 700;
+		margin-bottom: 3rem;
+		color: #fff;
+	}
+	&__location {
+		position: absolute;
+		text-align: left;
+	}
+	&__main-block {
+		max-width: 40rem;
+		margin: 0 auto;
+		background: rgba(20, 163, 15, 0.5);
+		border-radius: 30px;
+	}
+	&__sub-block {
+		margin-top: 6rem;
+		color: rgb(17, 0, 116);
+	}
+}
+.location {
+	&__input {
+		font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+		color: #fff;
+		background: rgba(20, 163, 15, 0.5);
+		border: 1px solid #fff;
+		border-radius: 30px;
+		font-size: 3rem;
+		padding: 1rem;
+		width: 25rem;
+		&::placeholder {
+			color: #fff;
+			font-size: 2rem;
+		}
+	}
+	&__button {
+		font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+		color: #fff;
+		font-size: 2rem;
+		padding: 1rem 2rem;
+		border-radius: 10px;
+		background: rgb(17, 0, 116);
+		margin-top: 2rem;
+		transition: all 0.5s ease;
+		&:hover {
+			background: rgb(39, 5, 230);
+		}
+	}
+	&__temperature {
+		margin-top: 3rem;
+		display: flex;
+		flex-direction: column;
+		color: #fff;
+	}
+	&__temperature-title {
+		font-size: 2.5rem;
+	}
+	&__temperature-items {
+		display: flex;
+		flex-direction: column;
+	}
+	&__temperature-item {
+		font-size: 2rem;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		margin-top: 2rem;
+		margin-right: auto;
+	}
+	&__temperature-btn {
+		margin-right: 1rem;
+		display: block;
+		cursor: pointer;
+	}
+}
+.main-block {
+	&__container {
+		padding: 3rem 3rem;
+		border: 3px solid #333;
+		border-radius: 30px;
+	}
+	&__city-name {
+		font-size: 5rem;
+		font-weight: 600;
+	}
+	&__icon-weather {
+	}
+	&__temperature {
+		font-size: 5rem;
+	}
+	&__icon-description {
+		font-size: 3rem;
+	}
+}
+.sub-block {
+	&__current-time {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__time {
+		display: flex;
+		align-items: center;
+	}
+	&__date {
+		display: flex;
+	}
+}
+.time {
+	&__hour,
+	&__minutes,
+	&__seconds {
+		font-size: 6rem;
+		font-weight: 600;
+	}
+	&__day {
+		margin: 0 2rem;
+		font-size: 3rem;
+	}
+}
+.date {
+	&__number {
+		font-size: 3rem;
+		margin-right: 1rem;
+	}
+	&__month {
+		font-size: 3rem;
+	}
+	&__year {
+		margin-left: 2rem;
+		font-size: 3rem;
+	}
+}
+
+.message-error {
+	display: none;
+	color: red;
+	font-size: 2rem;
+	margin: 1rem 0 0 2rem;
+}
