@@ -20,7 +20,7 @@ const kelvin = 273;
 const apiKey = "527d4b39cceaa23fab450417f1ce50ac";
 let api;
 
-api = `http://api.openweathermap.org/data/2.5/weather?q=Brest&appid=527d4b39cceaa23fab450417f1ce50ac`;
+api = `http://api.openweathermap.org/data/2.5/weather?q=Brest&lang=ru&appid=527d4b39cceaa23fab450417f1ce50ac`;
 
 fetch(api)
 	.then(function (resp) { return resp.json() })
@@ -49,7 +49,7 @@ fetch(api)
 
 function clickButton() {
 	let value = input.value;
-	api = `http://api.openweathermap.org/data/2.5/weather?q=${value}&appid=527d4b39cceaa23fab450417f1ce50ac`;
+	api = `http://api.openweathermap.org/data/2.5/weather?q=${value}&lang=ru&appid=527d4b39cceaa23fab450417f1ce50ac`;
 
 	fetch(api)
 		.then(function (resp) { return resp.json() })
